@@ -1,0 +1,30 @@
+{
+  "name": "magicmirror-static",
+  "version": "1.0.0",
+  "description": "Static Version of Magic Mirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papa-ogen/MagicMirror-static.git"
+  },
+  "author": "Jörgen Thelin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/papa-ogen/MagicMirror-static/issues"
+  },
+  "homepage": "https://github.com/papa-ogen/MagicMirror-static#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.2.0",
+    "css-loader": "^0.26.2",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

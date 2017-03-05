@@ -1,0 +1,61 @@
+body {
+	font: 100% $main-font;
+	color: $darkest-blue;
+	background: $light-background;
+}
+
+.header {
+	background: $dark-blue;
+	padding: 0.5rem 1rem;
+}
+
+.sub-header {
+	background: $blue;
+	font-size: 16px;
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: $light-background;
+		text-decoration: none;
+	}
+}
+
+.sub-nav {
+	& li {
+		display: inline-block;
+		padding: 1rem;
+
+		& > a:hover {
+			color: $pink;
+		}
+	}
+
+	& li.selected {
+		background: $light-background;
+
+		& > a {
+			color: $pink;
+		}
+	}
+}
+
+.logo {
+	* {
+		margin: 0;
+	}
+	& > h1 {
+		font-size: 30px;
+   -webkit-text-stroke: 1px $light-background;
+   color: white;
+   text-shadow:
+       3px 3px 0 $lightest-blue,
+     -1px -1px 0 $lightest-blue,  
+      1px -1px 0 $lightest-blue,
+      -1px 1px 0 $lightest-blue,
+       1px 1px 0 $lightest-blue;	
+	}
+}
