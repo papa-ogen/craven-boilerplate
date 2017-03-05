@@ -1,0 +1,2 @@
+# MagicMirror-static
+Static Project
