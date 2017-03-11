@@ -1,0 +1,20 @@
+.mirror-grid {
+	margin: 0;
+	min-height: 400px;
+	overflow: scroll;
+	text-align: center;
+
+	& div[class^='col'] {
+		& > .box {
+			padding: 0.5rem;
+		}
+
+		&:first-child {
+			border-right: 1px solid $lightest-blue;
+		}
+
+		&:last-child {
+			border-left: 1px solid $lightest-blue;
+		} 		
+	}
+}

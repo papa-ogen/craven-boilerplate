@@ -1,0 +1,46 @@
+$darkest-blue: #02020a;
+$dark-blue: #05293d;
+$blue: #176d8c;
+$light-blue: #23a0bf;
+$lightest-blue: #2dddf5;
+
+$light-background: #e5f2ff;
+
+$pink: #f06eaa;
+
+$white: #fff;
+$black: #000;
+
+.bg-darkest-blue {
+	background: $darkest-blue;
+}
+
+.bg-dark-blue {
+	background: $dark-blue;
+}
+
+.bg-blue {
+	background: $blue;
+}
+
+.bg-light-blue {
+	background: $light-blue;
+}
+
+.bg-lightest-blue {
+	background: $lightest-blue;
+}
+
+.bg-pink {
+	background: $pink;
+}
+
+
+
+.color-light-blue {
+	color: $light-blue;
+}
+
+.color-light {
+	color: $light-background;
+}
