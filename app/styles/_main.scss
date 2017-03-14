@@ -202,6 +202,7 @@ background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chr
 
 
  .content-header-list {
+	 display: none;
 	 position: absolute;
 	 top: 60px;
 	 left: 0;
@@ -210,4 +211,15 @@ background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chr
 	 padding: 0.5rem;
 	 font-size: 16px;
 	 z-index: 5;
+
+	 &:before {
+    content:"\A";
+    border-style: solid;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid $lightest-blue;
+    position: absolute;
+    left: 10%;
+		top: -10px;
+	}
  }

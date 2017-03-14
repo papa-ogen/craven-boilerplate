@@ -1,0 +1,67 @@
+.module {
+	padding: 0.8rem 0.5rem;
+}
+
+.module-settings {
+	position: absolute;
+	left: -1rem;
+	right: 0;
+	margin-top: 10px; 
+	z-index: 5;
+	background: $lightest-blue;
+	color: $darkest-blue;
+	text-align: left;	
+
+	&:before {
+    content:"\A";
+    border-style: solid;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid $lightest-blue;
+    position: absolute;
+    left: 18.5%;
+		top: -10px;
+	}
+
+	& > .module-settings-inner {
+		padding: 0.5rem;
+		margin-left: 1rem;
+	}
+
+	header {
+		// display: inline-block;
+		// vertical-align: middle;
+		// width: 100%;
+
+		& .icon {
+			display: inline-block;
+			fill: $darkest-blue;
+			width: 32px;
+			height: 32px;
+			vertical-align: middle;
+		}
+
+		h2 {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		input {
+			margin-top: 5px;
+		}
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			color: $darkest-blue;
+			line-height: 25px;
+			padding: 5px 0;
+			margin-top: -3px;
+		}
+
+		.form-field-wrapper {
+			width: auto;
+			padding: 0 15px;
+		}
+	}
+}

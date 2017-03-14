@@ -1,5 +1,8 @@
 .form-field-wrapper {
 	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
 }
 
 input[type="text"] {
@@ -41,13 +44,53 @@ input[type="text"] {
 	}
 }
 
+input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	background-color: $light-background;
+	border: 1px solid $darkest-blue;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+
+	&:active, &:checked:active {
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+	}
+
+	&:checked {
+		background-color: $light-background;
+		border: 1px solid $darkest-blue;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+		color: $darkest-blue;
+	}	
+
+	&:checked:after {
+		content: '\2714';
+		font-size: 14px;
+		position: absolute;
+		top: 0px;
+		left: 3px;
+		color: $darkest-blue;
+	}
+}
+
+label {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 4px;
+	padding-left: 3px;
+}
+
 .module-search {
 	margin: 0;
 	padding: 1rem;
 }
 
 .module-search-input {
-
+	width: 100%;
 }
 
 .icon.module-search-icon {

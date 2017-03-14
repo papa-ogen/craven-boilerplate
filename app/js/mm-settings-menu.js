@@ -2,8 +2,8 @@ export default class SettingsMenu {
 	constructor(menuCssClass) {
 		this.SELECTED_CLASS = "selected";
 		this.CONTENT_CLASS = "content-header-list";
+		this.menuCssClass = menuCssClass;
 		this.menuItems = this.getMenuItems();
-		// this.contentItems = this.getContentItems();
 		this.addClickEvent();
 	}   
 
@@ -21,12 +21,6 @@ export default class SettingsMenu {
 		return items;
 	}
 
-	// getContentItems() {
-	// 	let items = document.getElementsByClassName(this.contentCssClass);
-		
-	// 	return items;
-	// }	
-
 	selectItem(e) {
 		e.preventDefault();
 
@@ -37,13 +31,26 @@ export default class SettingsMenu {
 				el = item.closest("li")
 		}
 
-		if(el.classList.contains(this.SELECTED_CLASS)) return;
+		if(el.classList.contains(this.SELECTED_CLASS)) {
+			el.classList.remove(this.SELECTED_CLASS);	
+
+			// Update content
+			for(const child of el.childNodes) {
+				if(child.nodeName === "DIV") {
+					child.style.display = "none";
+				}
+
+			}
+
+			return;			
+		}
 
 		// Update menu
 		for(const item of this.menuItems) {
-
 			if(item !== el) {
 				item.classList.remove(this.SELECTED_CLASS);
+				item.getElementsByClassName(this.CONTENT_CLASS)[0].style.display = "none";
+				
 			} else {
 				item.classList.add(this.SELECTED_CLASS);
 			}
@@ -51,15 +58,11 @@ export default class SettingsMenu {
 		}
 
 		// Update content
-		for(const content of this.contentItems) {
-
-			if(content.dataset.contentId === id) {
-				content.style.display = "block";
-
-			} else {
-				content.style.display = "none";
-
+		for(const child of el.childNodes) {
+			if(child.nodeName === "DIV") {
+				child.style.display = "block";
 			}
+
 		}
 
 	}
