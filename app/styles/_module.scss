@@ -3,6 +3,7 @@
 }
 
 .module-settings {
+	display: none;
 	position: absolute;
 	left: -1rem;
 	right: 0;
@@ -29,9 +30,6 @@
 	}
 
 	header {
-		// display: inline-block;
-		// vertical-align: middle;
-		// width: 100%;
 
 		& .icon {
 			display: inline-block;
