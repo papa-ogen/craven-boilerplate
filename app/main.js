@@ -1,5 +1,6 @@
 import Menu from "./js/mm-menu.js"
 import SettingsMenu from "./js/mm-settings-menu.js"
+import ModuleSettings from "./js/mm-module-settings.js"
 import Headroom from "./js/headroom.js"
 
 require('./styles/magicmirror.scss');
@@ -12,4 +13,11 @@ require('./styles/magicmirror.scss');
 
     let menu = new Menu("sub-nav", "content", "mirror");
     let settingsMenu = new SettingsMenu("mirror-settings-menu");
+    
+    // Module Settings
+    let modules = document.getElementsByClassName("module");
+
+    [].forEach.call(modules, function (module) {
+        new ModuleSettings(module);
+    });
 })();

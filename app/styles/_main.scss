@@ -148,11 +148,11 @@ background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chr
 $fill-duration: .6s;
 
 .icon {
-  display: block;
+	display: block;
 	margin: auto;
-  text-indent: -9999px;
-  width: 50px;
-  height: 50px;
+	text-indent: -9999px;
+	width: 50px;
+	height: 50px;
 	fill: $lightest-blue;
 	-webkit-transition: fill $fill-duration ease;
 	-moz-transition: fill $fill-duration ease;
@@ -205,6 +205,10 @@ $fill-duration: .6s;
 			& .icon {
 				fill: $darkest-blue;
 			}
+
+			& > .mirror-settings-list-wrapper {
+				max-height: 300px;
+			}
 		}
 
 		&:first-child {
@@ -227,16 +231,30 @@ $fill-duration: .6s;
 	}
  }
 
- .content-header-list {
-	 display: none;
-	 position: absolute;
-	 top: 60px;
-	 left: -1rem;
-	 right: 0;
-	 text-align: left;
-	 padding: 0.5rem;
-	 font-size: 16px;
-	 z-index: 5;
+ .mirror-settings-list-wrapper {
+		-webkit-transition: max-height 1s; 
+		-moz-transition: max-height 1s; 
+		-ms-transition: max-height 1s; 
+		-o-transition: max-height 1s; 
+		transition: max-height 1s;  
+		overflow: hidden;
+		max-height: 0;
+		position: absolute;
+		top: 60px;
+		left: -1rem;
+		right: 0;
+		text-align: left;
+		padding: 0.5rem;
+		font-size: 16px;
+		z-index: 5;
+
+		& > .mirror-settings-list {
+			list-style-type: none;
+
+			& > li {
+				padding: 1rem;
+			}
+		}
 
 	//  &:before {
   //   content:"\A";

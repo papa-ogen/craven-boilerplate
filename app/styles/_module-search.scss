@@ -13,7 +13,6 @@
 
 		& ~ .module-search-list-wrapper {
 			max-height: 300px;
-			z-index: 10;
 		}
 	}
 }
@@ -38,6 +37,8 @@
 	left: 0;
 	width: 100%;
 	background: $light-background;
+	text-align: left;
+	z-index: 10;	
 
 	& > .module-search-list {
 		list-style-type: none;

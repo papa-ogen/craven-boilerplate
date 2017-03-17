@@ -1,11 +1,14 @@
-export default class SettingsMenu {
-	constructor(menuCssClass) {
-		this.SELECTED_CLASS = "selected";
-		this.menuCssClass = menuCssClass;
-		this.menu = document.getElementsByClassName(this.menuCssClass)[0];
-		this.menuItems = this.menu.children;
-		this.menu.addEventListener("click", (e) => {
-			this.selectItem(e);
+/*
+ * Currently disabled and currently using CSS only
+*/
+export default class ModuleSettings {
+	constructor(module) {
+		this.MODULE_CLASS = "module";
+		this.SELECTED_CLASS = "module-settings-display";
+		this.SETTINGS_CLASS = "module-settings";
+		this.module = module;
+		this.module.addEventListener("click", (e) => {
+			// this.selectItem(e);
 		});
 	}   
 

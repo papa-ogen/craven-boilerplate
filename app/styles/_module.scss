@@ -1,9 +1,19 @@
 .module {
 	padding: 0.8rem 0.5rem;
+
+	&:hover > .module-settings {
+		max-height: 300px;
+	}
 }
 
 .module-settings {
-	display: none;
+	-webkit-transition: max-height 1s; 
+	-moz-transition: max-height 1s; 
+	-ms-transition: max-height 1s; 
+	-o-transition: max-height 1s; 
+	transition: max-height 1s;  
+	overflow: hidden;
+	max-height: 0;
 	position: absolute;
 	left: -1rem;
 	right: 0;
@@ -62,6 +72,10 @@
 			padding: 0 15px;
 		}
 	}
+}
+
+.module-settings-display {
+  display: block;
 }
 
 footer {
