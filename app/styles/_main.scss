@@ -2,6 +2,8 @@ body {
 	font: 100% $main-font;
 	color: $darkest-blue;
 	background: $light-background;
+	padding: 0;
+	margin-bottom: 0;
 }
 
 ul, li {
@@ -186,6 +188,7 @@ $fill-duration: .6s;
 }
 
 .mirror-settings-menu {
+	margin: 0 -8px;
 	list-style-type: none;
 	font-size: 9px;
 	position: relative;
@@ -241,7 +244,7 @@ $fill-duration: .6s;
 		max-height: 0;
 		position: absolute;
 		top: 60px;
-		left: -1rem;
+		left: 0;
 		right: 0;
 		text-align: left;
 		padding: 0.5rem;
