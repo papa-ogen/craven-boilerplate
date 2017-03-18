@@ -4,6 +4,7 @@ export default class Menu {
 		this.menuCssClass = menuCssClass;
 		this.contentCssClass = contentCssClass;
 		this.selectedId = selectedId;
+		this.menu = document.getElementsByClassName(this.menuCssClass)[0];
 		this.menuItems = this.getMenuItems();
 		this.contentItems = this.getContentItems();
 		this.addClickEvent();
@@ -42,8 +43,7 @@ export default class Menu {
 	}
 
 	getMenuItems() {
-		let menu = document.getElementsByClassName(this.menuCssClass)[0];
-		let items = menu.getElementsByTagName("li");
+		let items = this.menu.getElementsByTagName("li");
 		
 		return items;
 	}

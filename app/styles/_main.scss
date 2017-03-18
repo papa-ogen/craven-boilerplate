@@ -16,15 +16,70 @@ ul, li {
 }
 
 .header {
+	position: relative;
 	margin: -8px -8px 0 -8px;
 	background: $dark-blue;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#05293d+0,02020a+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-background: -webkit-linear-gradient(#05293d 0%, #02020a 100%);
-background: -moz-linear-gradient(#05293d 0%, #02020a 100%);
-background: -o-linear-gradient(#05293d 0%, #02020a 100%);
-background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -webkit-linear-gradient(#05293d 0%, #02020a 100%);
+	background: -moz-linear-gradient(#05293d 0%, #02020a 100%);
+	background: -o-linear-gradient(#05293d 0%, #02020a 100%);
+	background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05293d', endColorstr='#02020a',GradientType=0 ); /* IE6-9 */
 	padding: 0.5rem 1rem;
+}
+
+.header-bg {
+	& > svg { 
+		position: absolute;
+		z-index: 1;
+	}
+
+	#star1 {
+		top: 10px;
+		right: 20%;
+		animation: pulse 3s infinite alternate;
+	}
+
+	#star2 {
+		top: 10px;
+		right: 23%;
+		fill: none;
+		stroke: $lightest-blue;
+		stroke-width: 2px;
+		animation: pulse 5s infinite alternate;
+	}
+
+	#star3 {
+		top: 25px;
+		right: 10%;
+		opacity: .3;
+		fill: none;
+		stroke: $lightest-blue;
+		stroke-width: 3px;
+	}
+
+	#star4 {
+		top: 30px;
+		right: 22%;
+		opacity: .3;
+	}	
+
+	#star5 {
+		top: 30px;
+		left: 5px;
+		opacity: 0;
+		animation: fadeIn 1s forwards;
+		animation-delay: 3s;
+	}		
+
+	@keyframes pulse {
+  	0%   { opacity: .2; }
+  	100% { opacity: .4; }
+	}
+
+	@keyframes fadeIn {
+  	to   { opacity: .4; }
+	}	
 }
 
 .sub-header {
@@ -131,19 +186,40 @@ background: linear-gradient(#05293d 0%, #02020a 100%); /* W3C, IE10+, FF16+, Chr
 }
 
 .logo {
-	* {
-		margin: 0;
+	position: relative;
+	z-index: 5;
+	fill: $light-background;
+	overflow: hidden;
+	max-width: 100%;
+	padding: 5px 0 0;
+
+	& svg {
+		height: 38px;
+		stroke: $lightest-blue;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		stroke-width: 2px;
+		animation: dash 5s linear forwards;
+		fill: none;
 	}
-	& > h1 {
-		font-size: 30px;
-   -webkit-text-stroke: 1px $light-background;
-   color: white;
-   text-shadow:
-       3px 3px 0 $lightest-blue,
-     -1px -1px 0 $lightest-blue,  
-      1px -1px 0 $lightest-blue,
-      -1px 1px 0 $lightest-blue,
-       1px 1px 0 $lightest-blue;	
+
+	@keyframes dash {
+		to {
+			stroke-dashoffset: 0;
+			fill: $light-background;
+		}
+	}
+}
+
+.login {
+	position: relative;
+	z-index: 3;
+	padding: 6px 0 0;
+
+	& svg {
+		width: 32px;
+		height: 32px;
+		fill: $light-background;
 	}
 }
 

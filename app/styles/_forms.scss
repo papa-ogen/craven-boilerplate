@@ -1,8 +1,17 @@
+// Form Reset 
+button, input, select, textarea {
+ outline: none;	
+}
+
 .form-field-wrapper {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	width: 100%;
+
+	&.form-field-center {
+		text-align: center;
+	}
 }
 
 .selectbox-wrapper {
@@ -23,7 +32,6 @@ input[type="text"] {
 	font-size: 16px;
 	font-family: $main-font;
 	font-weight: bold;
-	outline: none;
 	border: none;
 	-webkit-transition: background-color 600ms linear;
 	-ms-transition: background-color 600ms linear;
@@ -51,7 +59,6 @@ input[type="text"] {
 input[type="checkbox"] {
 	appearance: none;
 	-webkit-appearance: none;
-	outline: none;
 	background-color: $light-background;
 	border: 1px solid $darkest-blue;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
@@ -98,11 +105,11 @@ select {
 	-webkit-padding-start: 2px;
 	-moz-padding-start: 2px;
 	background-color: $light-background; /* fallback color if gradients are not supported */
-	background-image: url(/dist/images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
-	background-image: url(/dist/images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
-	background-image: url(/dist/images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
-	background-image: url(/dist/images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
-	background-image: url(/dist/images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+	background-image: url(/public/images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+	background-image: url(/public/images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
+	background-image: url(/public/images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
+	background-image: url(/public/images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
+	background-image: url(/public/images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
 	background-position: center right;
 	background-repeat: no-repeat;
 	background-size: 20px 16px;
@@ -116,4 +123,48 @@ select {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	padding: 10px;
+}
+
+.btn-submit {
+	background-color: $darkest-blue;
+	color: $lightest-blue;
+	width: 180px;
+	padding: 0.8rem;
+	margin: 1rem 0 0.5rem;
+	border: none;
+	font-size: 0.9em;
+	transition: all 0.5s;
+	transition: color 0.2s;
+  cursor: pointer;
+
+	& > span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+
+		&:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.2s;
+		}
+	}
+
+	&:hover {
+		color: $light-background;
+		background-color: $dark-blue;
+
+		& > span {
+			padding-right: 20px;
+
+			&:after {
+  			opacity: 1;
+  			right: 0;
+			}
+		}
+
+	}
 }

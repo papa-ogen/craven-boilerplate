@@ -3,7 +3,7 @@ import SettingsMenu from "./js/mm-settings-menu.js"
 import ModuleSettings from "./js/mm-module-settings.js"
 import Headroom from "./js/headroom.js"
 
-require('./styles/magicmirror.scss');
+import styles from './styles/magicmirror.scss';
 
 (function () {
     var myElement = document.querySelector("header");
@@ -11,7 +11,7 @@ require('./styles/magicmirror.scss');
 
     headroom.init(); // http://wicky.nillia.ms/headroom.js/
 
-    let menu = new Menu("sub-nav", "content", "mirror");
+    let menu = new Menu("sub-nav", "content", "profile");
     let settingsMenu = new SettingsMenu("mirror-settings-menu");
     
     // Module Settings
