@@ -1,10 +1,8 @@
-# MagicMirror-static
-Static Project
+# Craven Boilerplate
 
-Just type "webpack-dev-server" in Terminal or CMD
+## Setup
+1. Open CMD type npm install to install dependencies
+2. Typ npm start to run project
+3. npm test runs unit tests
 
-Go to http://localhost:8080
-
-## About SVGs
-https://css-tricks.com/scale-svg/
-https://css-tricks.com/guide-svg-animations-smil/
+Runs on http://localhost:8080
