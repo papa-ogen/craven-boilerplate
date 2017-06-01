@@ -81,6 +81,7 @@ a {
 
 .app-header {
   & .app-cog {
+    stroke: $light-grey;
     fill: $orange;
     animation: spin 20s linear infinite;
     transform-origin: 50% 50%;

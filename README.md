@@ -1,4 +1,8 @@
 # Craven Boilerplate
+* EsLint - Using AirBnb preset
+* Stylelint
+* Mocha/Chai - For unit testing
+* ES6 syntax using Babel
 
 ## Setup
 1. Open CMD type npm install to install dependencies

@@ -12,7 +12,7 @@ describe('#listToHTML()', function () {
       name: 'With',
       value: 'The Power of Metal'
     }],
-      expected = '<ul><li>Made by: Jörgen Thelin</li><li>With: The Power of Metal</li></ul>';
+      expected = '<ul class="app-list"><li>Made by: Jörgen Thelin</li><li>With: The Power of Metal</li></ul>';
     expect(App.listToHTML(input)).to.equal(expected);
   });
 });
