@@ -1,11 +1,15 @@
 {
     "extends": "airbnb-base",
     "plugins": [
-        "import"
+        "import",
+        "chai-expect"
     ],
     "globals": {
         "document": true,
-        "foo": true,
         "window": true
+    },
+    "parser": "babel-eslint",
+    "env": {
+        "mocha": true
     }
 }

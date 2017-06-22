@@ -1,18 +1,18 @@
-'use strict';
-const expect = require('chai').expect;
-
 import App from './app-example';
 
-describe('#listToHTML()', function () {
-  it('should take an array item objects and convert them to an HTML list', function () {
-    let input = [{
+const expect = require('chai').expect;
+
+describe('#listToHTML()', () => {
+  it('should take an array item objects and convert them to an HTML list', () => {
+    const input = [{
       name: 'Made by',
-      value: 'Jörgen Thelin'
+      value: 'Jörgen Thelin',
     }, {
       name: 'With',
-      value: 'The Power of Metal'
-    }],
-      expected = '<ul class="app-list"><li>Made by: Jörgen Thelin</li><li>With: The Power of Metal</li></ul>';
+      value: 'The Power of Metal',
+    }];
+
+    const expected = '<ul class="app-list"><li>Made by: Jörgen Thelin</li><li>With: The Power of Metal</li></ul>';
     expect(App.listToHTML(input)).to.equal(expected);
   });
 });
