@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/assets/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -21,25 +21,25 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-          loader: 'style-loader' // creates style nodes from JS strings
+          loader: 'style-loader', // creates style nodes from JS strings
         }, {
-          loader: 'css-loader' // translates CSS into CommonJS
+          loader: 'css-loader', // translates CSS into CommonJS
         }, {
           loader: 'postcss-loader',
           options: {
-            plugins: function () {
-              return [autoprefixer]
-            }
-          }
+            plugins() {
+              return [autoprefixer];
+            },
+          },
         }, {
-          loader: 'sass-loader' // compiles Sass to CSS
-        }]
+          loader: 'sass-loader', // compiles Sass to CSS
+        }],
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'build/index.html'
+      template: 'build/index.html',
     }),
     new StyleLintPlugin({
       configFile: '.stylelintrc',
@@ -47,6 +47,6 @@ module.exports = {
       files: '**/*.scss',
       failOnError: false,
       quiet: false,
-    })
-  ]
+    }),
+  ],
 };
