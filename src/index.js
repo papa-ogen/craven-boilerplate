@@ -1,7 +1,7 @@
 import App from './js/app-example';
 
 require('./index.html');
-require('./styles/styles.scss');
+require('./scss/styles.scss');
 
 
 const list = document.getElementById('hook');
