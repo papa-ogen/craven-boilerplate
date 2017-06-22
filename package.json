@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --inline --colors --open",
     "test": "mocha --compilers js:babel-core/register **/*-spec.js",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build": "webpack-dev-server -p --config ./webpack.prod.config.js --open"
   },
   "repository": {
     "type": "git",
@@ -39,11 +40,11 @@
     "style-loader": "^0.13.2",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
-    "stylelint-webpack-plugin": "^0.7.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "stylelint-webpack-plugin": "^0.7.0"
   },
   "dependencies": {
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
     "autoprefixer": "^7.1.1",
     "babel-polyfill": "^6.23.0",
     "chai": "^4.0.0",

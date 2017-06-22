@@ -17,13 +17,12 @@ $black: #000;
 }
 
 body {
-  background-color: $dark-grey;
-  color: $white;
   font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
   font-size: 2em;
+  margin: 1rem 0 2rem;
 }
 
 a {
@@ -39,15 +38,9 @@ a {
   background: $dark-grey;
   color: $white;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   border-bottom: 0.5rem solid $light-orange;
-  transition: box-shadow 0.3s ease-in-out;
-  animation: pulsate 1s ease-out infinite alternate;
-}
-
-@keyframes pulsate {
-  from { box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15); }
-  to { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
 }
 
 .app-footer {
@@ -64,9 +57,8 @@ a {
   margin: 0 auto;
   padding: 1rem;
 
-  h1,
   p {
-    margin-bottom: 0.5rem;
+    margin: 0;
   }
 }
 

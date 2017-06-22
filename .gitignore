@@ -2,3 +2,6 @@
 npm-debug.log
 .vscode
 debug.log
+
+# Production build folder
+/dist

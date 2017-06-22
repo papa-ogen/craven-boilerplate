@@ -10,10 +10,12 @@ const autoprefixer = require('autoprefixer');
 // });
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index'],
+  devtool: 'eval',
+  entry: './src/index',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
