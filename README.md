@@ -21,7 +21,10 @@ cd your-project-name
 npm install
 ```
 
-3. Typ npm start to run project
+3. Start project
+```bash
+npm start
+```
 
 (Runs on http://localhost:8080)
 
