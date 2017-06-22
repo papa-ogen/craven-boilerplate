@@ -4,7 +4,7 @@
   "description": "Startup project based on Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base build --hot --inline --colors --open",
+    "start": "webpack-dev-server --inline --colors --open",
     "test": "mocha --compilers js:babel-core/register **/*-spec.js",
     "test:watch": "npm run test -- --watch"
   },
@@ -48,5 +48,9 @@
     "babel-polyfill": "^6.23.0",
     "chai": "^4.0.0",
     "postcss-loader": "^2.0.5"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

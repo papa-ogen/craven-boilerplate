@@ -1,5 +1,6 @@
 import App from './js/app-example';
 
+require('./index.html');
 require('./styles/styles.scss');
 
 

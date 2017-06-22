@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -9,10 +10,9 @@ const autoprefixer = require('autoprefixer');
 // });
 
 module.exports = {
-  entry: ['babel-polyfill', './app/main.js'],
+  entry: ['babel-polyfill', './src/index'],
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/assets/',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   module: {
@@ -35,18 +35,27 @@ module.exports = {
           loader: 'sass-loader', // compiles Sass to CSS
         }],
       },
+      {
+        test: /\.html$/,
+        loader: 'raw-loader',
+      },
     ],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: 'build/index.html',
+      template: './src/index.html',
     }),
     new StyleLintPlugin({
       configFile: '.stylelintrc',
-      context: 'app',
+      context: 'src',
       files: '**/*.scss',
       failOnError: false,
       quiet: false,
     }),
   ],
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+  },
 };
