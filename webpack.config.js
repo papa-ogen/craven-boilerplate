@@ -24,16 +24,17 @@ module.exports = {
         test: /\.scss$/,
         use: [{
           loader: 'style-loader', // creates style nodes from JS strings
-        }, {
+        },
+        {
           loader: 'css-loader', // translates CSS into CommonJS
-        }, {
+        },
+        {
           loader: 'postcss-loader',
           options: {
-            plugins() {
-              return [autoprefixer];
-            },
+            plugins: () => [autoprefixer],
           },
-        }, {
+        },
+        {
           loader: 'sass-loader', // compiles Sass to CSS
         }],
       },
