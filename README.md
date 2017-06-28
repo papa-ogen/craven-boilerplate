@@ -106,3 +106,44 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 ```
+
+### Edit src/index.html
+```html
+<div id="root"></div>
+```
+
+
+## AngularJS Setup
+
+### Install dev Dependencies
+```bash
+npm install --save-dev eslint-plugin-angular
+```
+
+### Install Dependencies
+```bash
+npm install --save angular
+```
+
+### Edit .eslintrc.json
+```json
+"extends": ["airbnb-base", "plugin:angular/johnpapa"],
+```
+
+### Edit src/index.js
+```javascript
+import angular from 'angular';
+
+require('./index.html');
+require('./scss/styles.scss');
+
+angular.module('index', []);
+```
+
+### Edit src/index.html
+```html
+<div ng-app="index">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <h1>Hello {{name}}</h1>
+</div>
+```
