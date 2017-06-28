@@ -1,6 +1,6 @@
 {
   "name": "craven-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Startup project based on Webpack",
   "main": "index.js",
   "scripts": {
@@ -43,12 +43,13 @@
     "stylelint-webpack-plugin": "^0.7.0"
   },
   "dependencies": {
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1",
     "autoprefixer": "^7.1.1",
     "babel-polyfill": "^6.23.0",
+    "babel-preset-flow": "^6.23.0",
     "chai": "^4.0.0",
-    "postcss-loader": "^2.0.5"
+    "postcss-loader": "^2.0.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "browserslist": [
     "> 1%",
