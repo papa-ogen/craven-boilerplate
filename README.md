@@ -1,6 +1,6 @@
 # Craven Boilerplate
 
-### A Boilerplate for web development
+### A Boilerplate for Test Driven JavaScript Development
 
 * EsLint - Using AirBnb preset
 * Stylelint - Standard preset
