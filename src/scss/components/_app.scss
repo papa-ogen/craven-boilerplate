@@ -1,16 +1,3 @@
-$red: #c0392b;
-$yellow: #f1c40f;
-$green: #4bb543;
-$orange: #dc8000;
-
-$light-orange: #ffa526;
-$light-blue: #448ccb;
-$light-grey: #cdcdcd;
-$dark-grey: #4c4c4c;
-
-$white: #fff;
-$black: #000;
-
 * {
   margin: 0;
   padding: 0;
@@ -18,20 +5,6 @@ $black: #000;
 
 body {
   font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 1rem 0 2rem;
-}
-
-a {
-  color: $black;
-  transition: color 0.5s ease;
-
-  &:hover {
-    color: $white;
-  }
 }
 
 .app-nav {
@@ -53,7 +26,7 @@ a {
 }
 
 .app-content {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 1rem;
 

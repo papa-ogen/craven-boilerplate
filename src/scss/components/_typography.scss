@@ -1,0 +1,13 @@
+h1 {
+  font-size: 2em;
+  margin: 1rem 0 2rem;
+}
+
+a {
+  color: $black;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: $white;
+  }
+}
