@@ -30,9 +30,6 @@ module.exports = {
         },
         {
           loader: 'postcss-loader',
-          options: {
-            plugins: () => [autoprefixer],
-          },
         },
         {
           loader: 'sass-loader', // compiles Sass to CSS

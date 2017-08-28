@@ -8,10 +8,14 @@ body {
 }
 
 .app-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
   background: $dark-grey;
   color: $white;
   text-align: center;
-  padding: 1rem 0 0;
   border-bottom: 0.5rem solid $light-orange;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
 }
@@ -45,11 +49,26 @@ body {
 }
 
 .app-header {
+  min-height: 150px;
+  margin: auto;
+
   & .app-cog {
     stroke: $light-grey;
     fill: $orange;
     animation: spin 20s linear infinite;
     transform-origin: 50% 50%;
+  }
+
+  & > .app-title {
+    & > span {
+      display: block;
+      font-size: 1.2rem;
+    }
+  }
+
+  .header-summary {
+    margin: 1rem 0;
+    font-size: 0.9rem;
   }
 }
 
