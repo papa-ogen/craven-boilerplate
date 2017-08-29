@@ -102,9 +102,8 @@ npm install --save react react-dom
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-require('./index.html');
-require('./scss/styles.scss');
+import './scss/styles.scss';
+import './index.html';
 
 ReactDOM.render(
   <h1>Hello, world!</h1>,
@@ -138,9 +137,8 @@ npm install --save angular
 ### Edit src/index.js
 ```javascript
 import angular from 'angular';
-
-require('./index.html');
-require('./scss/styles.scss');
+import './scss/styles.scss';
+import './index.html';
 
 angular.module('index', []);
 ```
