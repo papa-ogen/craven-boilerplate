@@ -23,10 +23,15 @@ npm install
 
 3. Start project
 ```bash
-npm start
+npm run start
 ```
 
 (Runs on http://localhost:8080)
+
+## Prod
+```bash
+npm run build
+```
 
 ## Test
 Start a test run
