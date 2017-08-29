@@ -51,12 +51,10 @@ body {
 .app-header {
   min-height: 150px;
   margin: auto;
+  padding: 1rem 0;
 
-  & .app-cog {
-    stroke: $light-grey;
+  & .app-logo {
     fill: $orange;
-    animation: spin 20s linear infinite;
-    transform-origin: 50% 50%;
   }
 
   & > .app-title {
@@ -72,9 +70,16 @@ body {
   }
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
+#c {
+  stroke: $white;
+  stroke-dasharray: 100;
+  stroke-width: 1px;
+  animation: pulse 20s linear infinite;
+}
+
+@keyframes pulse {
+  to {
+    stroke-dashoffset: 1000;
   }
 }
 
