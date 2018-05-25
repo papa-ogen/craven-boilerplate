@@ -1,6 +1,6 @@
 {
   "name": "craven-boilerplate",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Startup project based on Webpack",
   "main": "index.js",
   "scripts": {
