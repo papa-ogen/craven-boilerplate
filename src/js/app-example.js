@@ -1,9 +1,9 @@
 const App = {
   listToHTML(items) {
-    const itemRow = items.map(item => `<li>${item.name}: ${item.value}</li>`).join('');
+    const itemRow = items.map(item => `<li>${item.name}: ${item.value}</li>`).join('')
 
-    return `<ul class="app-list">${itemRow}</ul>`.trim();
+    return `<ul class="app-list">${itemRow}</ul>`.trim()
   },
-};
+}
 
-export default App;
+export default App
